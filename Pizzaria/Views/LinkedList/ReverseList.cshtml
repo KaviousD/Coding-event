@@ -1,0 +1,16 @@
+@model Pizzaria.Models.ListNode
+
+@{
+    ViewData["Title"] = "Reversed Linked List";
+}
+
+<h1>Reversed Linked List</h1>
+
+@{
+    var currentNode = Model;
+    while (currentNode != null)
+    {
+        <p>@currentNode.Value</p>
+        currentNode = currentNode.Next;
+    }
+}

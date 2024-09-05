@@ -1,0 +1,14 @@
+@model List<List<Pizzaria.Models.KeyValuePairModel>>
+
+@{
+    ViewData["Title"] = "Insertion Sort";
+}
+
+<h1>Insertion Sort</h1>
+
+@foreach (var state in Model)
+{
+    <div>
+        <p>@string.Join(", ", state.Select(p => $"({p.Key}, '{p.Value}')"))</p>
+    </div>
+}
